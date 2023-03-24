@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ecoclean-f8c3a"
+  },
+  "targets": {
+    "ecoclean-f8c3a": {
+      "hosting": {
+        "EcoClean": [
+          "ecoclean-f8c3a"
+        ]
+      }
+    }
+  }
+}
