@@ -1,0 +1,13 @@
+@import url("node_modules/@ngneat/hot-toast/src/styles/styles.css");
+.form-container{
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  background: bisque;
+  padding: 50px;
+  border-radius: 16px;
+}
+.form-container div{
+  padding: 10px;
+}
+
