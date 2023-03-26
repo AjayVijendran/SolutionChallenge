@@ -1,5 +1,5 @@
-<div class="navbar navbar-light bg-light justify-content-around">
-    <div>Logo</div>
+<div class="navbar navbar-light bg-light justify-content-around" *ngIf="user$ | async as user">
+    <img src="assets/logo-black.png" width="50" height="50" style="border-radius: 100%;">
     <div class="d-flex">
       <div class="form-outline">
         <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search" />
@@ -8,5 +8,5 @@
         <i class="bi bi-search"></i>
       </button>
     </div>
-    <button><i class="bi bi-person-circle"></i></button>
+    <button class="btn btn-outline-dark" (click)="profile()"><img width="30" height="30" [src]="user.photoURL?? 'assets/default-userdp.jpg'" style="border-radius: 100%;" ></button>
 </div>

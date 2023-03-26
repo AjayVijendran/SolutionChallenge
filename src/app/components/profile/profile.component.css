@@ -1,0 +1,30 @@
+.profile-container{
+  display: block;
+  max-width: 600px;
+  margin: auto;
+  background: bisque;
+  padding: 40px;
+  border-radius: 16px;
+}
+.profile-container div{
+  padding: 10px;
+}
+
+.image img{
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.profile-container .form-group{
+  display: inline-block;
+
+}
+.image{
+  position: relative;
+}
+.image button{
+  position: absolute;
+  border-radius: 100%;
+  bottom:10px;
+  right: 40%;
+}

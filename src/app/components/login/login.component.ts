@@ -27,5 +27,8 @@ export class LoginComponent {
       this.router.navigate(['/home']);
     })
   }
+  navToReg(){
+    this.router.navigate(['/register'])
+  }
 
 }

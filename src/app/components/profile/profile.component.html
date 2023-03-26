@@ -1,1 +1,27 @@
-<p>profile works!</p>
+<div class="profile-container text-center" *ngIf="user$ | async as user">
+  <h1>User profile</h1>
+  <div class="image">
+    <img width="120" height="120" [src]="user.photoURL ?? 'assets/default-userdp.jpg'"/>
+    <button (click)="inputField.click()" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i></button>
+  </div>
+  <input #inputField type="file" hidden (change)="uploadImage($event,user)">
+  <!-- <div class="form-container">
+    <div class="form-group">
+        <input type="email" id="emailid" placeholder="Email Address" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <input type="text" id="name" placeholder="Enter Name" [(ngModel)]="name">
+    </div>
+    <div class="form-group">
+      <input type="text" id="phone" placeholder="Enter Phone number" [(ngModel)]="phone">
+    </div>
+    <div class="form-group">
+      <input type="text" id="Address" placeholder="Enter Address" [(ngModel)]="address">
+    </div>
+    <div class="text-center"><button (click)="profileForm()" class="btn btn-primary" type="submit">
+      Save
+    </button></div>
+  </div> -->
+
+  <button (click)="logout()" class="btn btn-primary">LogOut</button>
+</div>
