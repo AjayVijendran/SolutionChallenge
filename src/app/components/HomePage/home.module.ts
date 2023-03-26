@@ -2,10 +2,12 @@ import { HomeComponent } from './home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NavbarComponent } from './NavBar/navbar-componet';
+import { SidebarComponent } from './sidebar/sidebar.component';
 @NgModule({
   declarations:[
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    SidebarComponent
   ],
   imports:[
     BrowserModule
