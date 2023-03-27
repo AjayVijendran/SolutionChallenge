@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ProfileComponent } from './components/profile/profile.component';
 import {provideStorage,getStorage} from '@angular/fire/storage'
+import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.component';
 import {provideFirestore,getFirestore} from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     LandingComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewCleanupComponent
   ],
   imports: [
     BrowserModule,
