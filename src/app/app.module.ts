@@ -12,6 +12,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ProfileComponent } from './components/profile/profile.component';
+import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     LandingComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewCleanupComponent
   ],
   imports: [
     BrowserModule,
