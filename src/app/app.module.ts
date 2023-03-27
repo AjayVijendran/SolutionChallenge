@@ -12,8 +12,9 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ProfileComponent } from './components/profile/profile.component';
+import {provideStorage,getStorage} from '@angular/fire/storage'
+import {provideFirestore,getFirestore} from '@angular/fire/firestore'
 import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,8 @@ import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.compon
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
+    provideStorage(()=> getStorage()),
+    provideFirestore(()=> getFirestore()),
     HotToastModule.forRoot({
       dismissible: true
     })
