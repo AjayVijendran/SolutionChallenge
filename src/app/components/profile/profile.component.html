@@ -5,6 +5,10 @@
     <button (click)="inputField.click()" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i></button>
   </div>
   <input #inputField type="file" hidden (change)="uploadImage($event,user)">
+  <div>
+    <h2 class="mb-0">{{user.name}}</h2>
+    <span class="text-muted">{{user.email}}</span>
+  </div>
   <!-- <div class="form-container">
     <div class="form-group">
         <input type="email" id="emailid" placeholder="Email Address" [(ngModel)]="email">
@@ -22,6 +26,7 @@
       Save
     </button></div>
   </div> -->
+
 
   <button (click)="logout()" class="btn btn-primary">LogOut</button>
 </div>

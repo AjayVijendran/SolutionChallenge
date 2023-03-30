@@ -1,3 +1,4 @@
+import { NewCleanupModule } from './components/new-cleanup/new-cleanup.module';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { HomeModule } from './components/HomePage/home.module';
 import { NgModule } from '@angular/core';
@@ -24,7 +25,6 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    NewCleanupComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NewCleanupModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideStorage(()=> getStorage()),

@@ -23,9 +23,6 @@ export class UserService {
   }
   addUser(user: ProfileUser) : Observable<any>{
     const ref = doc(this.firestore,'users',user.uid)
-    console.log(user.uid)
-    console.log(user)
-    console.log(from(setDoc(ref,user)))
     return from(setDoc(ref,user))
   }
   updateUser(user: ProfileUser) : Observable<any>{
