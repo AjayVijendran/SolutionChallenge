@@ -15,6 +15,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import {provideStorage,getStorage} from '@angular/fire/storage'
 import {provideFirestore,getFirestore} from '@angular/fire/firestore'
 import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.component';
+import { ExploreCleanupComponent } from './components/explore-cleanup/explore-cleanup.component';
+import { MyCleanupsComponent } from './components/my-cleanups/my-cleanups.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.compon
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    NewCleanupComponent
+    NewCleanupComponent,
+    ExploreCleanupComponent,
+    MyCleanupsComponent
   ],
   imports: [
     BrowserModule,
