@@ -1,3 +1,4 @@
+import { NewCleanupModule } from './components/new-cleanup/new-cleanup.module';
 import { HotToastModule } from '@ngneat/hot-toast';
 import { HomeModule } from './components/HomePage/home.module';
 import { NgModule } from '@angular/core';
@@ -13,8 +14,10 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { ProfileComponent } from './components/profile/profile.component';
 import {provideStorage,getStorage} from '@angular/fire/storage'
-import {provideFirestore,getFirestore} from '@angular/fire/firestore'
 import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.component';
+import {provideFirestore,getFirestore} from '@angular/fire/firestore';
+import { Injectable } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { ExploreCleanupComponent } from './components/explore-cleanup/explore-cleanup.component';
 import { MyCleanupsComponent } from './components/my-cleanups/my-cleanups.component';
 @NgModule({
@@ -24,9 +27,7 @@ import { MyCleanupsComponent } from './components/my-cleanups/my-cleanups.compon
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
-    NewCleanupComponent,
-    ExploreCleanupComponent,
-    MyCleanupsComponent
+    NewCleanupComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +35,8 @@ import { MyCleanupsComponent } from './components/my-cleanups/my-cleanups.compon
     HomeModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    NewCleanupModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     provideStorage(()=> getStorage()),

@@ -6,6 +6,7 @@ import { ImageUploadService } from './../../services/image-upload.service';
 import { Component } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { ProfileUser } from 'src/app/models/user-profile';
 
 @Component({
   selector: 'app-profile',
@@ -19,17 +20,17 @@ export class ProfileComponent {
   name=''
   phone=''
   address=''
-  user$ = this.authservice.currentUser$
+  user$ = this.userservice.currentUserProfile$
   ngOnInIt() : void{
   }
-  uploadImage(event: any, user: User){
+  uploadImage(event: any, user: ProfileUser){
     this.ImageUploadService.uploadImage(event.target.files[0],`images/profile/${user.uid}`).pipe(
         this.toast.observe({
           success: "Image Uploaded",
           loading: "Uploading...",
           error: "there was an error"
         }),
-        concatMap((photoURL)=> this.authservice.updateProfileData({photoURL}))
+        concatMap((photoURL)=> this.userservice.updateUser({uid:user.uid,photoURL:photoURL}))
     ).subscribe();
   }
   profileForm(){

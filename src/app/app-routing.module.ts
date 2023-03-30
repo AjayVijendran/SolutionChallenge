@@ -6,6 +6,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { canActivate, redirectLoggedInTo,redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+import { NewCleanupComponent } from './components/new-cleanup/new-cleanup.component'
 import { MyCleanupsComponent } from './components/my-cleanups/my-cleanups.component';
 import { ExploreCleanupComponent } from './components/explore-cleanup/explore-cleanup.component';
 const redirectToLogin = () => redirectUnauthorizedTo(['login']);
@@ -33,6 +34,10 @@ const routes: Routes = [
     path: 'profile',
     component: ProfileComponent,
     ...canActivate(redirectToLogin)
+  },
+  {
+    path: 'newCleanup',
+    component: NewCleanupComponent
   },
   {
     path: 'my-cleanups',
