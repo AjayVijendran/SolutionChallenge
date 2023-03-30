@@ -26,8 +26,7 @@ import { MyCleanupsComponent } from './components/my-cleanups/my-cleanups.compon
     LandingComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileComponent,
-    NewCleanupComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
