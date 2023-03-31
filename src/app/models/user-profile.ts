@@ -5,5 +5,5 @@ export interface ProfileUser{
   phone?: string;
   address?: string;
   photoURL?: string;
-  Ocleanups?: object;
+  Ocleanups?: {'location':string,'strength':string,'description':string,'photoURL':string};
 }
