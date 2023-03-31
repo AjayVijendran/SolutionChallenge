@@ -31,6 +31,8 @@ import { HomeComponent } from './components/HomePage/home.component';
     LoginComponent,
     RegisterComponent,
     ProfileComponent,
+    MyCleanupsComponent,
+    ExploreCleanupComponent,
   ],
   imports: [
     BrowserModule,

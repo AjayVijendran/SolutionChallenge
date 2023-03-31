@@ -1,20 +1,12 @@
-<h1>My Cleanups</h1>
-    <section class="container">
+<h1 class="text-center">My Cleanups</h1>
+    <div class="container" *ngIf="user$ | async as user">
         <div class="card">
-            <div class="card-image card-1"></div>
-
-                <h2>@ Mambalam</h2>
-                <p>A group of 30 people cleaning the streets</p>
-                
-            
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/bg-event.png" width="269px" height="150px" alt="">
+            <div class="card-image card-1">
+              <img [src]=" user.Ocleanups?.photoURL ?? 'assets/bg-event.png'" width="269px" height="150px" alt="">
             </div>
-                <h2>Title</h2>
-                <p>Text</p>
-            
-        </div>
-    </section>
+                <h2>{{user.Ocleanups?.location}}</h2>
+                <p>{{user.Ocleanups?.description}}</p>
+                <p>People Enrolled:{{user.Ocleanups?.strength}}</p>
+          </div>
+      </div>
 

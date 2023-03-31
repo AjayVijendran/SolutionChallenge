@@ -1,22 +1,13 @@
 <h1>Explore Cleanups</h1>
-    <section class="container">
+    <div class="container" *ngIf="detail">
         <div class="card">
-            <div class="card-image card-1"></div>
-
-                <h2>@ Mambalam</h2>
-                <p>A group of 30 people cleaning the streets</p>
-                <a href="">Join Now</a>
-            
-        </div>
-        <div class="card">
-            <div class="card-image">
-                <img src="assets/bg-event.png" width="269px" height="150px" alt="">
+            <div class="card-image card-1">
+              <img [src]="detail['photoURL']" width="269px">
             </div>
-
-                <h2>Title</h2>
-                <p>Text</p>
+                <h2>{{detail['location']}}</h2>
+                <p>{{detail['description']}}</p>
                 <a href="">Join Now</a>
-            
+
         </div>
-    </section>
+      </div>
 

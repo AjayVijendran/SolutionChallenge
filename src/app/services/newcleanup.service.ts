@@ -1,5 +1,5 @@
 import { ref } from '@angular/fire/storage';
-import { doc, Firestore, docData, setDoc, updateDoc } from '@angular/fire/firestore';
+import { doc, Firestore, docData, setDoc, updateDoc, getDoc } from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
 import { Observable, switchMap, of, from } from 'rxjs';
@@ -24,4 +24,7 @@ export class NewcleanupService {
     const ref = doc(this.firestore,'users',user.uid)
     return from(updateDoc(ref,{...user}))
   }
-}
+  getdata(user:ProfileUser): object{
+    const ref = doc(this.firestore,'users',user.uid)
+    return getDoc(ref)}
+  }
