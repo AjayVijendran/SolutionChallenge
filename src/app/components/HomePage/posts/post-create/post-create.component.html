@@ -1,0 +1,37 @@
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        placeholder="Post title"
+        #title="ngModel"
+      />
+
+      <mat-error *ngIf="title.invalid"> Please enter a post title </mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="6"
+        name="content"
+        ngModel
+        required
+        placeholder="Post Content"
+        #content="ngModel"
+      ></textarea>
+      <mat-error *ngIf="content.invalid">
+        Please enter some content for the post
+      </mat-error>
+
+      <!--The value object is a javascript code that directly binds any object to the textarea header-->
+    </mat-form-field>
+    <button mat-raised-button color="accent" type="submit">Save Post</button>
+  </form>
+</mat-card>
+
+<!--String interpolation, use it to call method directly onto componenent {{ newPost }}-->

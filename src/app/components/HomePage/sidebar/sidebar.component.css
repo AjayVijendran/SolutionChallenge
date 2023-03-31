@@ -1,0 +1,7 @@
+:host {
+  position: fixed;
+  top: 64px; /* adjust as needed based on the height of your navbar */
+  left: 0;
+  bottom: 0;
+  background-color: #f0f0f0;
+}
