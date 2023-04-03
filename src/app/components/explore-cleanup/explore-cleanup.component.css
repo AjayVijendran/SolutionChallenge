@@ -3,16 +3,19 @@
     padding: 0%;
     margin: 0%;
 }
+.element{
+  display: flex;
+  flex-wrap: wrap;
+}
 .container{
     display:flex;
-    justify-content:center;
-    align-items: center;
+    flex-basis: 33.33%;
     flex-wrap: wrap;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 .card{
-    background: white;
+    background: aqua;
     width:270px;
     margin: 10px;
     margin-left: 50px;

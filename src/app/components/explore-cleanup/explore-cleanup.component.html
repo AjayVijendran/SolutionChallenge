@@ -1,13 +1,3 @@
-<h1>Explore Cleanups</h1>
-    <div class="container" *ngIf="detail">
-        <div class="card">
-            <div class="card-image card-1">
-              <img [src]="detail['photoURL']" width="269px">
-            </div>
-                <h2>{{detail['location']}}</h2>
-                <p>{{detail['description']}}</p>
-                <a href="">Join Now</a>
-
-        </div>
-      </div>
+<h1 class="text-center">Explore Cleanups</h1>
+<div class="element" [innerHTML]="cleanupdetail"></div>
 
